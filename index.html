@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Tux Mania</title>
+	<style> body { margin: 0; background: #B4D9E7; } </style>
+	<script src="src/phaser-2.0.6.min.js"></script>
+	<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+	<script src="src/Boot.js"></script>
+	<script src="src/Preloader.js"></script>
+	<script src="src/MainMenu.js"></script>
+    <script src="src/Levels.js"></script>
+    <script src="src/Game.js"></script>
+	<script src="src/Game1.js"></script>
+	<script src = "src/Game3.js"></script>
+	
+</head>
+<body>
+<script>
+(function() {
+	var game = new Phaser.Game(1366,768, Phaser.AUTO, 'game');
+	game.state.add('Boot', Mania.Boot);
+	game.state.add('Preloader', Mania.Preloader);
+	game.state.add('MainMenu', Mania.MainMenu);
+    game.state.add('Levels', Mania.Levels);
+	game.state.add('Game', Mania.Game);
+	game.state.add('Game1', Mania.Game1);
+	game.state.add('Game3',Mania.Game3);
+	game.state.start('Boot');
+})();
+</script>
+</body>
+</html>
